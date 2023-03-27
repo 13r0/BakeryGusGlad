@@ -20,3 +20,8 @@
 
 ![image](https://user-images.githubusercontent.com/47927866/228037906-6740cb76-dc1c-4d9d-ba44-3570a0daa643.png)
 
+Меню
+
+![image](https://user-images.githubusercontent.com/47927866/228042610-f7bcadbf-6885-421d-ac05-369919358cdc.png)
+
+Список сотрудников
