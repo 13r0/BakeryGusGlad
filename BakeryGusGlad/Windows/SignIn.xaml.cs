@@ -35,7 +35,7 @@ namespace BakeryGusGlad
             if (userAuth != null)
             {
 
-                ProductListWindow productList = new ProductListWindow();
+                MenuWindow productList = new MenuWindow();
                 productList.Show();
                 this.Close();
             }
