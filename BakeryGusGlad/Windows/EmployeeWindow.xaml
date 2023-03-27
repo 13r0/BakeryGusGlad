@@ -5,8 +5,91 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:BakeryGusGlad.Windows"
         mc:Ignorable="d"
-        Title="EmployeeWindow" Height="450" Width="800">
+        Title="Каталог товаров" 
+        Height="800" 
+        Width="1240"
+        WindowStartupLocation="CenterScreen">
     <Grid>
-        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="52"/>
+            <RowDefinition Height="48"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="57"/>
+        </Grid.RowDefinitions>
+
+
+        <TextBlock Text="Сотрудники"
+                       Height="25"
+                       Width="120"
+                       FontWeight="Bold"
+                       FontSize="17"/>
+
+        <WrapPanel Grid.Row="1" 
+                   VerticalAlignment="Center">
+
+        </WrapPanel>
+
+
+
+
+        <ListView Grid.Row="2"
+                      x:Name="LvProduct"
+                      Margin="5"
+                      d:ItemsSource="{d:SampleData ItemCount=5}"
+                      ScrollViewer.HorizontalScrollBarVisibility="Disabled">
+
+
+
+            <ListView.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <WrapPanel/>
+                </ItemsPanelTemplate>
+            </ListView.ItemsPanel>
+
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <Border Width="150"
+                                Height="250"
+                                BorderThickness="1"
+                                BorderBrush="Blue"
+                                Margin="8">
+                        <StackPanel>
+                            <Image
+                                       Source="{Binding EmployeePhoto}"
+                                       Height="150"
+                                       Width="120"
+                                       Margin="8">
+
+                            </Image>
+
+                            <TextBlock  x:Name="tbxFName"
+                                            Text="{Binding FName}"
+                                            FontSize="14"
+                                            TextAlignment="Center"
+                                            Margin="0 5 0 0"/>
+
+                            <Grid>
+
+                                <TextBlock x:Name="tbxLName"
+                                           FontSize="14"
+                                           TextAlignment="Center"
+                                           Text="{Binding LName}"
+                                           Margin="0 5 0 0"/>
+
+                            </Grid>
+                            <TextBlock FontSize="14"
+                                       TextAlignment="Center"
+                                       Margin="0 5 0  0"
+                                       Text="{Binding Patronymic}">
+                            </TextBlock>
+
+                        </StackPanel>
+                    </Border>
+
+                </DataTemplate>
+            </ListView.ItemTemplate>
+
+        </ListView>
+
     </Grid>
 </Window>
