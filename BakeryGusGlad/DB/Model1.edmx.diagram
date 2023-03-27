@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="0a2aec328cbb43e68d0b6e6e85bc273d" Name="Diagram1">
+        <EntityTypeShape EntityType="BakeryGusGladModel.Client" Width="1.5" PointX="0.75" PointY="2.25" />
+        <EntityTypeShape EntityType="BakeryGusGladModel.Employee" Width="1.5" PointX="0.75" PointY="17.25" />
+        <EntityTypeShape EntityType="BakeryGusGladModel.Manufacturer" Width="1.5" PointX="1.5" PointY="12.375" />
+        <EntityTypeShape EntityType="BakeryGusGladModel.Product" Width="1.5" PointX="0.75" PointY="7.875" />
+        <EntityTypeShape EntityType="BakeryGusGladModel.ProductType" Width="1.5" PointX="1.5" PointY="14.875" />
+        <EntityTypeShape EntityType="BakeryGusGladModel.Purchase" Width="1.5" PointX="3" PointY="2.5" />
+        <EntityTypeShape EntityType="BakeryGusGladModel.sysdiagrams" Width="1.5" PointX="5.75" PointY="0.75" />
+        <EntityTypeShape EntityType="BakeryGusGladModel.User" Width="1.5" PointX="3" PointY="5.75" />
+        <AssociationConnector Association="BakeryGusGladModel.FK_Purchase_Client" />
+        <AssociationConnector Association="BakeryGusGladModel.FK_Purchase_Employee" />
+        <AssociationConnector Association="BakeryGusGladModel.FK_Product_Manufacturer" />
+        <AssociationConnector Association="BakeryGusGladModel.FK_Product_ProductType" />
+        <AssociationConnector Association="BakeryGusGladModel.PurchaseProduct" />
+        <AssociationConnector Association="BakeryGusGladModel.UserClient" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
