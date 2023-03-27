@@ -30,19 +30,13 @@ namespace BakeryGusGlad
 
         private void BtnSignIn_Click(object sender, RoutedEventArgs e)
         {
-            var userAuth = ContextDB.User.ToList()
-               .Where(i => i.Login == TbLogin.Text &&
-               i.Password == PbPassword.Password)
-               .FirstOrDefault();
+            var userAuth = ContextDB.User.ToList().Where(i => i.Login == TbLogin.Text && i.Password == PbPassword.Password).FirstOrDefault();
 
             if (userAuth != null)
             {
 
-                ClassHelper.UserDataClass.user = userAuth;
-
-
-                MainWindow mainWindow = new MainWindow();
-                mainWindow.Show();
+                ProductListWindow productList = new ProductListWindow();
+                productList.Show();
                 this.Close();
             }
             else

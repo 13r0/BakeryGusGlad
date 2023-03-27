@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BakeryGusGlad.DB;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,8 +7,8 @@ using System.Threading.Tasks;
 
 namespace BakeryGusGlad.ClassHelper
 {
-    internal class EFClass
+    internal class CardProductClass
     {
-        public static DB.Entities1 ContextDB { get; } = new DB.Entities1();
+        public static List<Product> products = new List<Product>();
     }
 }

@@ -26,6 +26,7 @@ namespace BakeryGusGlad.DB
         public decimal Cost { get; set; }
         public int TypeID { get; set; }
         public int ManufacturerID { get; set; }
+        public string Description { get; set; }
         public byte[] ProdPhoto { get; set; }
     
         public virtual Manufacturer Manufacturer { get; set; }

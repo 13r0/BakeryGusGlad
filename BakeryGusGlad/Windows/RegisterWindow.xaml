@@ -30,7 +30,7 @@
                 Foreground="Gray"
                 Margin="0 70 0 0 "/>
             <TextBox
-                x:Name="TbLogin"
+                x:Name="tbxLogin"
                 Height="50"
                 Width="200"
                 FontSize="20"
@@ -45,7 +45,7 @@
                 Margin="0 20 0 0" Width="196"/>
 
             <PasswordBox
-                x:Name="PbPassword"
+                x:Name="tbxPass"
                 Height="50"
                 Width="200"
                 FontSize="20"

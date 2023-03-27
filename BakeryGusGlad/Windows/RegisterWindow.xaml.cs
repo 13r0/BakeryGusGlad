@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Runtime.Remoting.Contexts;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -15,6 +14,7 @@ using System.Windows.Shapes;
 
 using static BakeryGusGlad.ClassHelper.EFClass;
 using BakeryGusGlad.Windows;
+using BakeryGusGlad.ClassHelper;
 
 namespace BakeryGusGlad.Windows
 {
@@ -30,21 +30,17 @@ namespace BakeryGusGlad.Windows
 
         private void btnReg_Click(object sender, RoutedEventArgs e)
         {
-            // валидация 
-            if (string.IsNullOrWhiteSpace(TbLogin.Text))
+            if (tbxPass.Password == "")
             {
-                MessageBox.Show("Пустой логин");
-                return;
+                MessageBox.Show("Введите пароль");
             }
-
-            // добавление пользоватля
+           
 
             ContextDB.User.Add(new DB.User
             {
-                Login = TbLogin.Text,
-                Password = PbPassword.Password,
+                Login = tbxLogin.Text,
+                Password = tbxPass.Password,
                 Email = tbxEmail.Text,
-                RoleID = 1
             });
 
             ContextDB.SaveChanges();
