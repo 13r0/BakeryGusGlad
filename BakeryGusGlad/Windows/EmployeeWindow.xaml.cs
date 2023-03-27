@@ -1,4 +1,6 @@
-﻿using System;
+﻿using BakeryGusGlad.ClassHelper;
+using BakeryGusGlad.DB;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -22,6 +24,14 @@ namespace BakeryGusGlad.Windows
         public EmployeeWindow()
         {
             InitializeComponent();
+
+            
+        }
+
+        private void GetListEmployee()
+        {
+            List<Employee> employee = new List<Employee>();
+            employee = EFClass.ContextDB.Employee.ToList();
         }
     }
 }

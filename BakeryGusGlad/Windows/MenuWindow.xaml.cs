@@ -29,7 +29,9 @@ namespace BakeryGusGlad.Windows
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-
+            EmployeeWindow employeeWindow = new EmployeeWindow();
+            employeeWindow.Show();
+            this.Close();
         }
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
