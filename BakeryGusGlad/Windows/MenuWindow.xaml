@@ -11,7 +11,7 @@
     <Grid>
         <StackPanel>
 
-            <TextBlock x:Name="Tbluser" 
+            <TextBlock x:Name="TbUser" 
                    Text="Пользователь"
                    HorizontalAlignment="Right"
                    Margin="10"/>

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BakeryGusGlad.ClassHelper;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,7 +24,7 @@ namespace BakeryGusGlad.Windows
         {
             InitializeComponent();
 
-            Tbluser.Text = ClassHelper.UserDataClass.user.ToString();
+            TbUser.Text = UserDataClass.user.Login;
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)

@@ -16,8 +16,7 @@ using System.Windows.Shapes;
 
 using static BakeryGusGlad.ClassHelper.EFClass;
 using BakeryGusGlad.Windows;
-
-
+using BakeryGusGlad.ClassHelper;
 namespace BakeryGusGlad
 {
 
@@ -34,6 +33,8 @@ namespace BakeryGusGlad
 
             if (userAuth != null)
             {
+
+                UserDataClass.user = userAuth;
 
                 MenuWindow productList = new MenuWindow();
                 productList.Show();
